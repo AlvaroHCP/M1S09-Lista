@@ -1,8 +1,16 @@
+import { useState } from "react"
+
 function CardAdicionar() {
+
+    const [tarefa, adicionaTarefa] = useState("")
 
     return (
         <>
-            Card Adicionado
+            <input type="text"
+                value={tarefa}
+                placeholder="Adicionar Tarefa"
+                onChange={(e) => adicionaTarefa(e.target.value)} />
+            <button onClick={(tarefa) => (tarefa)}>Adicionar</button>
         </>
     )
 }

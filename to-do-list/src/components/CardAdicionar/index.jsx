@@ -10,7 +10,7 @@ function CardAdicionar(props) {
                 value={tarefa}
                 placeholder="Adicionar Tarefa"
                 onChange={(e) => setTarefa(e.target.value)} />
-            <button onClick={() => ()}>Adicionar</button>
+            <button onClick={() => (props.adicionarTarefa(tarefa))}>Adicionar</button>
             <br /><br /><input type="text" placeholder={tarefa} disabled />
         </>
     )

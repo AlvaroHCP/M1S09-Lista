@@ -21,7 +21,12 @@ function App() {
     <>
       {console.log(listaTarefas)}
       <CardAdicionar adicionarTarefa={adicionarTarefa} />
-
+      {listaTarefas.map((tarefa) => (
+        <h2>
+          {tarefa.textoTarefa}
+        </h2>
+      )
+      )}
     </>
   )
 }

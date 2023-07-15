@@ -1,16 +1,17 @@
 import { useState } from "react"
 
-function CardAdicionar() {
+function CardAdicionar(props) {
 
-    const [tarefa, adicionaTarefa] = useState("")
+    const [tarefa, setTarefa] = useState("")
 
     return (
         <>
             <input type="text"
                 value={tarefa}
                 placeholder="Adicionar Tarefa"
-                onChange={(e) => adicionaTarefa(e.target.value)} />
-            <button onClick={(tarefa) => (tarefa)}>Adicionar</button>
+                onChange={(e) => setTarefa(e.target.value)} />
+            <button onClick={() => ()}>Adicionar</button>
+            <br /><br /><input type="text" placeholder={tarefa} disabled />
         </>
     )
 }

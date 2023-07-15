@@ -1,0 +1,23 @@
+.container {
+    width: 25rem;
+    display: flex;
+    align-items: center;
+}
+
+/* .container div {
+    justify-content: space-between;
+} */
+
+.lista {
+    margin-left: 1rem;
+    justify-content: space-between;
+}
+
+.tarefaFinalizada {
+    text-decoration: line-through;
+    opacity: 70%;
+}
+
+.tarefa button {
+    height: 10px;
+}

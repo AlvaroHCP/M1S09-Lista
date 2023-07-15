@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from "react"
 import CardAdicionar from "./components/CardAdicionar"
+import ListItem from "./components/ListItem"
 
 function App() {
 
@@ -22,11 +23,8 @@ function App() {
       {console.log(listaTarefas)}
       <CardAdicionar adicionarTarefa={adicionarTarefa} />
       {listaTarefas.map((tarefa) => (
-        <h2>
-          {tarefa.textoTarefa}
-        </h2>
-      )
-      )}
+        <ListItem key={tarefa.id} id={tarefa.id} textoTarefa={tarefa.textoTarefa} finalizado={tarefa.finalizado} />
+      ))}
     </>
   )
 }

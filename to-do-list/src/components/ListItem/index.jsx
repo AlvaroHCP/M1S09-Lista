@@ -14,6 +14,7 @@ function ListItem(props) {
                     <h3 className={finalizado && "tarefaFinalizada"}>{props.textoTarefa}</h3>
                     <div>
                         <button onClick={() => setFinalizado(!finalizado)}>Finalizar</button>
+                        <button className="btn-remover" onClick={() => props.removerTarefa(props.id)}>Remover</button>
                     </div>
                 </div>
             </section>

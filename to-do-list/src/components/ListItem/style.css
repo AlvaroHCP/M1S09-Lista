@@ -1,5 +1,5 @@
 .container {
-    width: 25rem;
+    width: 30rem;
     display: flex;
     align-items: center;
 }
@@ -20,4 +20,8 @@
 
 .tarefa button {
     height: 10px;
+}
+
+.btn-remover {
+    margin-left: 0.5rem;
 }

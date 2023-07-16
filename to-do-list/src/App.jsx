@@ -7,7 +7,8 @@ function App() {
 
   const [listaTarefas, setListaTarefas] = useState([])
 
-  const adicionarTarefa = (texto) => {
+  const adicionarTarefa = (e, texto) => {
+    e.preventDefault()
     if (texto == "") {
       alert("É necessário escrever uma tarefa")
       return
@@ -18,12 +19,22 @@ function App() {
     setListaTarefas([...listaTarefas, novaTarefa])
   }
 
+  const removerTarefa = (id) => {
+    const novaLista = listaTarefas.filter(tarefa => tarefa.id != id)
+
+    setListaTarefas(novaLista)
+  }
+
   return (
     <>
       {console.log(listaTarefas)}
       <CardAdicionar adicionarTarefa={adicionarTarefa} />
       {listaTarefas.map((tarefa) => (
-        <ListItem key={tarefa.id} id={tarefa.id} textoTarefa={tarefa.textoTarefa} finalizado={tarefa.finalizado} />
+        <ListItem key={tarefa.id}
+          id={tarefa.id}
+          textoTarefa={tarefa.textoTarefa}
+          finalizado={tarefa.finalizado}
+          removerTarefa={removerTarefa} />
       ))}
     </>
   )

@@ -1,3 +1,4 @@
+import "./style.css"
 import { useState } from "react"
 
 function CardAdicionar(props) {
@@ -6,13 +7,16 @@ function CardAdicionar(props) {
 
     return (
         <>
-            <div>
-                <input type="text"
-                    value={tarefa}
-                    placeholder="Adicionar Tarefa"
-                    onChange={(e) => setTarefa(e.target.value)} />
-                <button onClick={() => (props.adicionarTarefa(tarefa))}>Adicionar</button>
-                <br /><br /><input type="text" placeholder={tarefa} disabled />
+            <div className="tarefas">
+                <h1>Lista de Tarefas</h1>
+                <form>
+                    <input className="tarefa-input" type="text"
+                        value={tarefa}
+                        placeholder="Adicione aqui sua Tarefa!"
+                        onChange={(e) => setTarefa(e.target.value)} />
+                    <button className="btn-adicionar" onClick={(e) => (props.adicionarTarefa(e, tarefa))}>Adicionar</button>
+                </form>
+                {/* <br /><br /><input type="text" placeholder={tarefa} disabled /> */}
             </div>
         </>
     )

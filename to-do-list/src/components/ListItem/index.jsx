@@ -7,14 +7,16 @@ function ListItem(props) {
 
     return (
         <>
-            <div className="container">
+            <section className="container">
                 <input type="checkbox" checked={finalizado} />
                 {/* <h3>{props.id} - {props.textoTarefa} - {finalizado ? "Sim" : "Não"}</h3> */}
                 <div className="container lista">
                     <h3 className={finalizado && "tarefaFinalizada"}>{props.textoTarefa}</h3>
-                    <button onClick={() => setFinalizado(!finalizado)}>Finalizar</button>
+                    <div>
+                        <button onClick={() => setFinalizado(!finalizado)}>Finalizar</button>
+                    </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }

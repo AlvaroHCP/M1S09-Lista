@@ -5,6 +5,8 @@ function ListItem(props) {
 
     const [finalizado, setFinalizado] = useState(props.finalizado)
 
+    let btnText = "Finalizar"
+
     return (
         <>
             <section className="container">
@@ -13,7 +15,7 @@ function ListItem(props) {
                 <div className="container lista">
                     <h3 className={finalizado && "tarefaFinalizada"}>{props.textoTarefa}</h3>
                     <div>
-                        <button onClick={() => setFinalizado(!finalizado)}>Finalizar</button>
+                        <button onClick={() => setFinalizado(!finalizado)}>{finalizado ? (btnText = "Reativar") : (btnText = "Finalizar")}</button>
                         <button className="btn-remover" onClick={() => props.removerTarefa(props.id)}>Remover</button>
                     </div>
                 </div>

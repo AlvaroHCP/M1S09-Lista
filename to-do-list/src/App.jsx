@@ -7,7 +7,7 @@ function App() {
 
   const [listaTarefas, setListaTarefas] = useState([])
 
-  const adicionarTarefa = (e, texto) => {
+  const adicionarTarefa = (e, texto, setTexto) => {
     e.preventDefault()
     if (texto == "") {
       alert("É necessário escrever uma tarefa")
@@ -17,6 +17,8 @@ function App() {
     const novaTarefa = { id: listaTarefas.length + 1, textoTarefa: texto, finalizado: false }
 
     setListaTarefas([...listaTarefas, novaTarefa])
+
+    setTexto("") // Limpando o campo de texto do input
   }
 
   const removerTarefa = (id) => {

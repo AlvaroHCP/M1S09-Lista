@@ -1,3 +1,4 @@
+import "./font/BeaufortforLOL-Regular.ttf"
 import './App.css'
 import { useState } from "react"
 import CardAdicionar from "./components/CardAdicionar"

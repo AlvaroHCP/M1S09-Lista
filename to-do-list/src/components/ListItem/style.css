@@ -25,3 +25,14 @@
 .btn-remover {
     margin-left: 0.5rem;
 }
+
+#tarefa-LoL {
+    font-family: "Spiegel_TT_Regular";
+    /* color: #C89B3C; */
+    color: #C8AA6E;
+}
+
+.btn-LoL {
+    background-color: #C89B3C;
+    font-family: "Spiegel_TT_Bold";
+}

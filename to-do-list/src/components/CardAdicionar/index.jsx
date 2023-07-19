@@ -8,13 +8,13 @@ function CardAdicionar(props) {
     return (
         <>
             <div className="tarefas">
-                <h1>Lista de Tarefas</h1>
+                <h1 className="fonte-LoL">LISTA DE TAREFAS</h1>
                 <form>
                     <input className="tarefa-input" type="text"
                         value={tarefa}
                         placeholder="Adicione aqui sua Tarefa!"
                         onChange={(e) => setTarefa(e.target.value)} />
-                    <button className="btn-adicionar" onClick={e => props.adicionarTarefa(e, tarefa, setTarefa)}>Adicionar</button>
+                    <button className="btn-adicionar btn-LoL" onClick={e => props.adicionarTarefa(e, tarefa, setTarefa)}>Adicionar</button>
                 </form>
                 {/* <br /><br /><input type="text" placeholder={tarefa} disabled /> */}
             </div>
